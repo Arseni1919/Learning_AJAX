@@ -12,6 +12,39 @@ AJAX is a developer's dream, because you can:
 
 - [Example 1 - Text File](static/js/ajax1.js)
 
+```js
+document.getElementById('button').addEventListener('click', loadText);
+
+function loadText(){
+    // Create XHR Object
+    var xhr = new XMLHttpRequest();
+    // open - type, url/file, async
+    console.log(xhr);
+    xhr.open('GET', 'static/txt/sample.txt', true);
+
+    // optional - used for loaders (!)
+    xhr.onprogress = function () {
+        console.log('READYSTATE', xhr.readyState);
+    }
+
+    xhr.onload = function (){
+        console.log('READYSTATE', xhr.readyState);
+        if(this.status == 200){
+            document.getElementById('text').innerHTML = this.responseText;
+        } else if(this.status == 404){
+            document.getElementById('text').innerHTML = 'Not found...';
+        }
+    }
+
+    xhr.onerror = function () {
+        console.log('ERROR ... ');
+    }
+
+    // sends request
+    xhr.send();
+}
+```
+
 ## Credits
 
 - [AJAX Crash Course (Vanilla JavaScript)](https://www.youtube.com/watch?v=82hnvUYY6QA&ab_channel=TraversyMedia)
