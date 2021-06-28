@@ -8,6 +8,10 @@ AJAX is a developer's dream, because you can:
 - Update a web page without reloading the page
 - Send data to a web server - in the background
 
+## Example List
+
+- [Example 1 - Text File](static/js/ajax1.js)
+
 ## Credits
 
 - [AJAX Crash Course (Vanilla JavaScript)](https://www.youtube.com/watch?v=82hnvUYY6QA&ab_channel=TraversyMedia)
