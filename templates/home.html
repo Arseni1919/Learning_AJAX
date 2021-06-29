@@ -10,7 +10,9 @@
     <h3>Here are the links of the project </h3>
 
     <ul>
-        <li><a href="/ajax1">ajax 1</a></li>
+    {% for i in ajax_amount %}
+        <li><a href="/ajax/{{ i }}">ajax {{ i }}</a></li>
+    {% endfor %}
     </ul>
 
 {% endblock %}

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}
+    <title> AJAX 4 </title>
+{% endblock %}
+
+{% block body %}
+    <h1>AJAX 4 - AJAX & Forms</h1>
+
+    <button id="button1">Get Name</button>
+    <hr>
+
+
+
+    <h1>GET FORM</h1>
+    <form method="GET" action="/process">
+        <input type="text" name="name">
+        <input type="submit">
+    </form>
+    <br><br>
+    <h1>AJAX GET FORM</h1>
+    <form id="getForm">
+        <input type="text" name="name" id="name1">
+        <input type="submit">
+    </form>
+    <div id="respondGet"></div>
+    <br><br>
+    <hr>
+
+
+
+    <h1>POST FORM</h1>
+    <form method="POST" action="/process">
+        <input type="text" name="name">
+        <input type="submit">
+    </form>
+    <br><br>
+    <h1>AJAX POST FORM</h1>
+    <form id="postForm">
+        <input type="text" name="name" id="name2">
+        <input type="submit">
+    </form>
+    <div id="respond"></div>
+    <br><br>
+
+
+
+    <script src="../static/js/ajax4.js"></script>
+{% endblock %}
